@@ -1,6 +1,6 @@
 class CreateUsers < ActiveRecord::Migration[5.1]
   def change
-    create_table :users do |t|
+    create_table :user do |t|
       t.string :email
       t.string :crypted_password
       t.string :password_salt

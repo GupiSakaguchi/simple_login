@@ -1,4 +1,4 @@
-class UserSession < Authlogcic::Session::Base
+class UserSession < Authlogic::Session::Base
   secure Rails.env.production?
-  httponely true
+  httponly true
 end

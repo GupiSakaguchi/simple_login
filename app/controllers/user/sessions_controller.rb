@@ -7,7 +7,7 @@ class User::SessionsController < ApplicationController
   def crate
     @user_session = UserSession.new(user_session_params)
     if @user_session.save
-      redirect_to root_path
+      redirect_to "/"
     else
       render action: :new
     end
@@ -15,7 +15,7 @@ class User::SessionsController < ApplicationController
 
   def destroy
     current_user_session.destory
-    redirect_to root_path
+    redirect_to "/"
   end
 
   private
